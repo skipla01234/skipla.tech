@@ -6,6 +6,38 @@ Version: 20180831
 */
 
 
+/**
+ * プロフィール表示を修正
+ */
+.profile {
+  background: #fff;
+  border: solid #ddd 1px;
+}
+
+.profile-avatar {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.profile-avatar img {
+  border-radius: 50%;
+}
+
+.st-author-nickname {
+  text-align: center;
+}
+
+.st-author-sns {
+  text-align: center;
+}
+
+.st-author-description {
+  margin: 10px;
+}
+
+/** プロフィールここまで */
+
+
 /*media Queries スマートフォンとタブレットサイズ（959px以下）で適応したいCSS - スマホ・タブレット
 ---------------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 959px) {
