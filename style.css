@@ -5,7 +5,6 @@ Description: ver20180831以上対応
 Version: 20180831
 */
 
-
 /**
  * プロフィール表示を修正
  */
@@ -37,6 +36,55 @@ Version: 20180831
 
 /** プロフィールここまで */
 
+/** 関連記事をカード化する */
+.kanren-card {
+  display:    flex;
+  flex-wrap:  wrap;
+  justify-content: start;
+}
+
+.kanren-detail {
+  width: calc(50% - 40px);
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  margin: 10px 20px;
+}
+
+.kanren-detail-image {
+  position: relative;
+}
+
+.kanren-detail-image img {
+  display: block;
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.category-label {
+  position: absolute;
+  left: 10px;
+  bottom: -10px;
+  width: 100%;
+}
+
+.st-catgroup-under .st-catgroup.itiran-category .catname {
+  border-radius: 10px !important;
+}
+
+.kanren-detail-title {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.st-excerpt {
+  padding: 10px;
+}
+
+.st-excerpt p {
+  font-size: .8rem !important;
+  color: #636e72;
+}
 
 /*media Queries スマートフォンとタブレットサイズ（959px以下）で適応したいCSS - スマホ・タブレット
 ---------------------------------------------------------------------------------------------------*/
@@ -48,8 +96,6 @@ Version: 20180831
 /*media Queries タブレットサイズ（600px～959px）のみで適応したいCSS -タブレットのみ
 ---------------------------------------------------------------------------------------------------*/
 @media only screen and (min-width: 600px) and (max-width: 959px) {
-
-
 	/*-- ここまで --*/
 }	
 	
@@ -72,7 +118,15 @@ Version: 20180831
 /*media Queries スマホサイズ（599px）以下で適応したいCSS - スマホのみ
 ---------------------------------------------------------------------------------------------------*/
 @media print, screen and (max-width: 599px) {
+  /**
+   * カードを1列にする
+   */
+  .kanren-card {
+    flex-direction: column;
+  }
 
-	
+  .kanren-detail {
+    width: 100%;
+  }
 	/*-- ここまで --*/
 }
